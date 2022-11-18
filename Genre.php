@@ -1,5 +1,5 @@
 <?php
-class Realisator extends People{
+class Realisator {
     private $_name;
     private $_fName;
     private $_sexe;
@@ -7,7 +7,10 @@ class Realisator extends People{
     private $_films;
         
     public function __construct(string $fName,string $name,string $sexe,date $birthday){
-        parent::__construct($fName,$name,$sexe,$birthday);
+        $this->_name = $name;
+        $this->_fName = $fName;
+        $this->_sexe = $sexe;
+        $this->_birthday = $birthday;
         $this->_films = [];
     }
             

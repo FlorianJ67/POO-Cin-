@@ -1,14 +1,15 @@
 <?php
-class Realisator extends People{
-    private $_name;
-    private $_fName;
-    private $_sexe;
-    private $_birthday;
-    private $_films;
+class People {
+    protected $_name;
+    protected $_fName;
+    protected $_sexe;
+    protected $_birthday;
         
     public function __construct(string $fName,string $name,string $sexe,date $birthday){
-        parent::__construct($fName,$name,$sexe,$birthday);
-        $this->_films = [];
+        $this->_name = $name;
+        $this->_fName = $fName;
+        $this->_sexe = $sexe;
+        $this->_birthday = $birthday;
     }
             
     //GET
@@ -40,10 +41,5 @@ class Realisator extends People{
         $this->_birthday = $birthday;
     }
     
-
-
-    public function addFilm($newFilm){
-        array_push($this->_films,$newFilm);
-    }
 }
 ?>

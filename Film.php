@@ -4,13 +4,15 @@ class Film {
     private $_launchDate;
     private $_length;
     private $_realisator;
+    private $_actors;
         
     public function __construct(string $title,$launchDate,$length, Realisator $realisator){
         $this->_title = $title;
         $this->_launchDate = $launchDate;
         $this->_length = $lentgh;
-        $this->_realisator= $realisator;
+        $this->_realisator = $realisator;
         $this->_realisator->addFilm($this);
+        $this->$_actors =[];
     }
             
     //GET

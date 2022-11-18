@@ -1,15 +1,13 @@
 <?php
-class Actor {
+class Actor extends People {
     private $_name;
     private $_fName;
     private $_sexe;
     private $_birthday;
+    private $_role;
         
     public function __construct(string $fName,string $name,string $sexe,date $birthday,$role){
-        $this->_name = $name;
-        $this->_fName = $fName;
-        $this->_sexe = $sexe;
-        $this->_birthday = $birthday;
+        parent::__construct($fName,$name,$sexe,$birthday);
         $this->_role = $role
     }
             
