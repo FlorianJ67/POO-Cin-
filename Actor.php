@@ -4,11 +4,15 @@ class Actor extends People {
     private $_fName;
     private $_sexe;
     private $_birthday;
-    private $_role;
+    private $_roles;
         
     public function __construct(string $fName,string $name,string $sexe,date $birthday,$role){
         parent::__construct($fName,$name,$sexe,$birthday);
-        $this->_role = $role
+        $this->_roles = [];
+        //add role + film on a tab assos $role => $film (pas sur du code)
+        public function addRole($role,Film $film){
+            array_push($this->_roles,$role => $film);
+        }
     }
             
     //GET
