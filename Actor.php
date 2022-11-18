@@ -1,9 +1,9 @@
 <?php
 class Actor {
-    protected $_name;
-    protected $_fName;
-    protected $_sexe;
-    protected $_birthday;
+    private $_name;
+    private $_fName;
+    private $_sexe;
+    private $_birthday;
         
     public function __construct(string $fName,string $name,string $sexe,date $birthday,$role){
         $this->_name = $name;
@@ -42,6 +42,5 @@ class Actor {
         $this->_birthday = $birthday;
     }
     
-
 }
 ?>

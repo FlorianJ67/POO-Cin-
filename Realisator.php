@@ -1,10 +1,10 @@
 <?php
 class Realisator {
-    protected $_name;
-    protected $_fName;
-    protected $_sexe;
-    protected $_birthday;
-    protected $_films;
+    private $_name;
+    private $_fName;
+    private $_sexe;
+    private $_birthday;
+    private $_films;
         
     public function __construct(string $fName,string $name,string $sexe,date $birthday){
         $this->_name = $name;
@@ -44,7 +44,7 @@ class Realisator {
     }
     
 
-    
+
     public function addFilm($newFilm){
         array_push($this->_films,$newFilm);
     }

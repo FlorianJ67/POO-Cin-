@@ -1,9 +1,9 @@
 <?php
 class Film {
-    protected $_title;
-    protected $_launchDate;
-    protected $_length;
-    protected $_realisator;
+    private $_title;
+    private $_launchDate;
+    private $_length;
+    private $_realisator;
         
     public function __construct(string $title,$launchDate,$length, Realisator $realisator){
         $this->_title = $title;
@@ -36,3 +36,4 @@ class Film {
     }
                         
 }
+?>
