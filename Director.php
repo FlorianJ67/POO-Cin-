@@ -1,5 +1,5 @@
 <?php
-class Realisator extends People{
+class Director extends People{
     private $_name;
     private $_fName;
     private $_sexe;
@@ -39,8 +39,6 @@ class Realisator extends People{
     public function setBirthday($birthday){
         $this->_birthday = $birthday;
     }
-    
-
 
     public function addFilm($newFilm){
         array_push($this->_films,$newFilm);

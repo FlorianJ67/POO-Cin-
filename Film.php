@@ -3,19 +3,18 @@ class Film {
     private $_title;
     private $_launchDate;
     private $_length;
-    private $_actors;
-    private $_realisator;
+    private $_director;
     private $_genre;
+    private $_casting = [];
         
-    public function __construct(string $title,$launchDate,$length, Realisator $realisator,Genre $genre){
+    public function __construct(string $title,$launchDate,$length, Director $director,Genre $genre){
         $this->_title = $title;
         $this->_launchDate = $launchDate;
         $this->_length = $lentgh;
-        $this->_actors =[];
-        $this->_realisator = $realisator;
-        $this->$realisator->addFilm($title);
+        $this->_director = $director;
+        $this->_director->addFilm($title);
         $this->_genre = $genre;
-        $this->$genre->addFilm($title);
+        $this->_genre->addFilm($title);
     }
             
     //GET
@@ -30,7 +29,7 @@ class Film {
     }
         
     //SET
-    public function settitle($title){
+    public function setTitle($title){
         $this->_libelle = $libelle;
     }
     public function setLaunchDate($LaunchDate){
@@ -38,6 +37,11 @@ class Film {
     }
     public function setLength($length){
         $this->_length = $length;
-    }                   
+    }   
+    
+    
+    public function addCasting($role,Actor $actor){
+        $this->_casting->array_push($role,$actor displayFullName());
+    }
 }
 ?>
