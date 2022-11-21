@@ -3,18 +3,19 @@ class Film {
     private $_title;
     private $_launchDate;
     private $_length;
-    private $_realisator;
     private $_actors;
+    private $_realisator;
     private $_genre;
         
     public function __construct(string $title,$launchDate,$length, Realisator $realisator,Genre $genre){
         $this->_title = $title;
         $this->_launchDate = $launchDate;
         $this->_length = $lentgh;
-        $this->_realisator = $realisator;
-        $this->_realisator->addFilm($this);
         $this->_actors =[];
+        $this->_realisator = $realisator;
+        $this->$realisator->addFilm($title);
         $this->_genre = $genre;
+        $this->$genre->addFilm($title);
     }
             
     //GET
@@ -37,7 +38,6 @@ class Film {
     }
     public function setLength($length){
         $this->_length = $length;
-    }
-                        
+    }                   
 }
 ?>
