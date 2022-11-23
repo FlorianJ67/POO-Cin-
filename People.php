@@ -44,7 +44,6 @@ class People {
     }
     public function setBirthday($birthday){
         $this->_birthday = $birthday;
-    }
-    
+    } 
 }
 ?>
