@@ -1,12 +1,12 @@
 <?php
 class Director extends People{
-    private $_name;
-    private $_fName;
-    private $_sexe;
-    private $_birthday;
+    protected $_name;
+    protected $_fName;
+    protected $_sexe;
+    protected $_birthday;
     private $_films;
         
-    public function __construct(string $fName,string $name,string $sexe,date $birthday){
+    public function __construct(string $fName,string $name,string $sexe,$birthday){
         parent::__construct($fName,$name,$sexe,$birthday);
         $this->_films = [];
     }

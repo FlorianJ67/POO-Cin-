@@ -4,7 +4,7 @@ class Genre {
     private $_films;
         
     public function __construct(string $name){
-        $this->$_name = $name;
+        $this->_name = $name;
         $this->_films = [];
     }
             
@@ -20,6 +20,7 @@ class Genre {
 
     public function addFilm($newFilm){
         array_push($this->_films,$newFilm);
+
     }
 }
 ?>

@@ -10,7 +10,7 @@ class Film {
     public function __construct(string $title,$launchDate,$length, Director $director,Genre $genre){
         $this->_title = $title;
         $this->_launchDate = $launchDate;
-        $this->_length = $lentgh;
+        $this->_length = $length;
         $this->_director = $director;
         $this->_director->addFilm($title);
         $this->_genre = $genre;
@@ -27,6 +27,12 @@ class Film {
     public function getLength(){
         return $this->_length;
     }
+    public function getDirector(){
+        return $this->_director;
+    }
+    public function getGenre(){
+        return $this->_genre;
+    }
         
     //SET
     public function setTitle($title){
@@ -39,9 +45,5 @@ class Film {
         $this->_length = $length;
     }   
     
-    
-    public function addCasting($role,Actor $actor){
-        $this->_casting->array_push($role,$actor->displayFullName());
-    }
 }
 ?>

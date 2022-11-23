@@ -1,14 +1,16 @@
 <?php
 class Casting {
     private $_film;
-    private $_roles;
+    private $_role;
+    private $_actor;
         
-    public function __construct(Film $film){
+    public function __construct(Film $film,Role $role,Actor $actor){
         $this->_film = $film;
-        $this->_roles = [];
-        foreach($film->_casting as $role){
-            $this->_roles->array_push($role);
-        }
+        $film->_casting->addFilmCasting($role,$actor);
+        $this->_role = $role;
+        $role->_casting->addRoleCasting($film,$actor);
+        $this->_actor = $actor;
+        $actor->_casting->addActorCasting($film,$role);
     }
             
     //GET
@@ -19,5 +21,16 @@ class Casting {
         return $this->_roles;
     }
         
+
+    public function addFilmCasting(Role $role,Actor $actor){
+        $this->_casting->array_push($role,$actor->displayFullName());
+    }
+    public function addRoleCasting(Film $film,Actor $actor){
+        $this->_casting->array_push($film,$actor->displayFullName());
+    }
+    public function addActorCasting(Film $film,Role $role){
+        $this->_casting->array_push($film,$role);
+    }
+
 }
 ?>

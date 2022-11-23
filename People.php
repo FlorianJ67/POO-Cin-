@@ -5,7 +5,7 @@ class People {
     protected $_sexe;
     protected $_birthday;
         
-    public function __construct(string $fName,string $name,string $sexe,date $birthday){
+    public function __construct(string $fName,string $name,string $sexe,$birthday){
         $this->_name = $name;
         $this->_fName = $fName;
         $this->_sexe = $sexe;

@@ -1,14 +1,13 @@
 <?php
 class Actor extends People {
-    private $_name;
-    private $_fName;
-    private $_sexe;
-    private $_birthday;
-    private $_roles;
+    protected $_name;
+    protected $_fName;
+    protected $_sexe;
+    protected $_birthday;
+    private $_casting =[];
         
-    public function __construct(string $fName,string $name,string $sexe,date $birthday){
+    public function __construct(string $fName,string $name,string $sexe,$birthday){
         parent::__construct($fName,$name,$sexe,$birthday);
-        $this->_roles = [];
     }
             
     //GET
@@ -45,8 +44,5 @@ class Actor extends People {
     }
     
 
-    public function addRole(Role $role,Film $film){
-        array_push($this->_roles,$role => $film);
-    }
 }
 ?>
