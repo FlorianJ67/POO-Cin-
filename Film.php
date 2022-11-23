@@ -1,20 +1,20 @@
 <?php
 class Film {
-    private $_title;
+    public $_title;
     private $_launchDate;
     private $_length;
     private $_director;
     private $_genre;
-    private $_casting = [];
+    public $_casting = [];
         
     public function __construct(string $title,$launchDate,$length, Director $director,Genre $genre){
         $this->_title = $title;
         $this->_launchDate = $launchDate;
         $this->_length = $length;
-        $this->_director = $director;
-        $this->_director->addFilm($title);
-        $this->_genre = $genre;
-        $this->_genre->addFilm($title);
+        $this->_director = $director->displayFullName();
+        $director->addFilm($title);
+        $this->_genre = $genre->_name;
+        $genre->addFilmToGenre($title);
     }
             
     //GET
@@ -45,5 +45,8 @@ class Film {
         $this->_length = $length;
     }   
     
+    public function addFilm($newFilm){
+        array_push($this->_films,$newFilm);
+    }
 }
 ?>

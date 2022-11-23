@@ -26,6 +26,11 @@ class People {
         return $this->_birthday;
     }
 
+    public function displayFullName(){
+        return $this->_fName;
+        return " ";
+        return $this->_name;
+    }
         
     //SET
     public function setName($name){

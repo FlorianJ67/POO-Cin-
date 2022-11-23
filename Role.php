@@ -6,9 +6,9 @@ class Role {
     private $_casting;
         
     public function __construct(Actor $actor,$role,Film $film){
-        $this->_actor = $actor;
+        $this->_actor = $actor->displayFullName();
         $this->_name = $role;
-        $this->_film = $film;
+        $this->_film = $film->_title;
         $this->_casting = [];
         New Casting($film,$this,$actor);
     }
