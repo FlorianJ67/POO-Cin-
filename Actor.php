@@ -23,11 +23,6 @@ class Actor extends People {
     public function getBirthday(){
         return $this->_birthday;
     }
-    public function displayFullName(){
-        return $this->_fName;
-        return " ";
-        return $this->_name;
-    }
         
     //SET
     public function setName($name){
@@ -42,7 +37,6 @@ class Actor extends People {
     public function setBirthday($birthday){
         $this->_birthday = $birthday;
     }
-    
 
 }
 ?>

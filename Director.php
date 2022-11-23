@@ -24,7 +24,6 @@ class Director extends People{
     public function getBirthday(){
         return $this->_birthday;
     }
-
         
     //SET
     public function setName($name){
