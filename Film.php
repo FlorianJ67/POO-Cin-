@@ -41,7 +41,7 @@ class Film {
     
     
     public function addCasting($role,Actor $actor){
-        $this->_casting->array_push($role,$actor displayFullName());
+        $this->_casting->array_push($role,$actor->displayFullName());
     }
 }
 ?>

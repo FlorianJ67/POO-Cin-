@@ -7,7 +7,7 @@ class Casting {
         $this->_film = $film;
         $this->_roles = [];
         foreach($film->_casting as $role){
-            $this->_array_push($role);
+            $this->_roles->array_push($role);
         }
     }
             

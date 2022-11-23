@@ -6,13 +6,9 @@ class Actor extends People {
     private $_birthday;
     private $_roles;
         
-    public function __construct(string $fName,string $name,string $sexe,date $birthday,$role){
+    public function __construct(string $fName,string $name,string $sexe,date $birthday){
         parent::__construct($fName,$name,$sexe,$birthday);
         $this->_roles = [];
-        //add role + film on a tab assos $role => $film (pas sur du code)
-        public function addRole($role,Film $film){
-            array_push($this->_roles,$role => $film);
-        }
     }
             
     //GET
@@ -28,7 +24,11 @@ class Actor extends People {
     public function getBirthday(){
         return $this->_birthday;
     }
-
+    public function displayFullName(){
+        return $this->_fName;
+        return " ";
+        return $this->_name;
+    }
         
     //SET
     public function setName($name){
@@ -44,5 +44,9 @@ class Actor extends People {
         $this->_birthday = $birthday;
     }
     
+
+    public function addRole(Role $role,Film $film){
+        array_push($this->_roles,$role => $film);
+    }
 }
 ?>
