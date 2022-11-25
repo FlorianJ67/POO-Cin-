@@ -51,5 +51,10 @@ class Film {
     public function addCasting($newCasting){
         array_push($this->_casting,$newCasting);
     }
+    public function listCasting(){
+        foreach($this->_casting as $casting){
+            echo "Dans le film ".$this->getTitle()." " .$casting->getRole()->getName()." est interpréter par ".$casting->getActor()->getFname()." ".$casting->getActor()->getName();
+        }
+    }
 }
 ?>

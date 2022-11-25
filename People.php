@@ -27,9 +27,9 @@ class People {
     }
 
     public function displayFullName(){
-        return $this->_fName;
+        $this->getFName();
         return " ";
-        return $this->_name;
+        $this->getName();
     }
         
     //SET

@@ -1,9 +1,5 @@
 <?php
 class Director extends People{
-    protected $_name;
-    protected $_fName;
-    protected $_sexe;
-    protected $_birthday;
     private $_films;
         
     public function __construct(string $fName,string $name,string $sexe,$birthday){
@@ -41,6 +37,12 @@ class Director extends People{
 
     public function addFilm($newFilm){
         array_push($this->_films,$newFilm);
+    }
+    public function listFilm(){
+        echo "Le réalisateur ".$this->getFname()." ".$this->getName(). " a produit les films suivant:<br>";
+        foreach($this->_films as $film){
+            echo $film."<br>";
+        }
     }
 }
 ?>

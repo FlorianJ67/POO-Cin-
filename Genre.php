@@ -20,7 +20,12 @@ class Genre {
 
     public function addFilmToGenre($newFilm){
         array_push($this->_films,$newFilm);
+    }
 
+    public function listFilm(){
+        foreach($this->_films as $film){
+            echo "Le genre ".$this->getName()." est associé au film " .$film;
+        }
     }
 }
 ?>
