@@ -1,11 +1,11 @@
 <?php
 class Film {
-    public $_title;
+    private $_title;
     private $_launchDate;
     private $_length;
     private $_director;
     private $_genre;
-    public $_casting = [];
+    private $_casting = [];
         
     public function __construct(string $title,$launchDate,$length, Director $director,Genre $genre){
         $this->_title = $title;
@@ -47,6 +47,9 @@ class Film {
     
     public function addFilm($newFilm){
         array_push($this->_films,$newFilm);
+    }
+    public function addCasting($newCasting){
+        array_push($this->_casting,$newCasting);
     }
 }
 ?>

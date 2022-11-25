@@ -16,8 +16,10 @@ $genre1 = new Genre("Super-Hero");
 
 $film1 = new Film("Batman",1989,126,$director1,$genre1);
 
+$role1 = new Role($actor1,"Batman",$film1);
 
-$role = new Role($actor1,"Batman",$film1);
+//casting
+$casting = new Casting($film1,$role1,$actor1);
 
 
 

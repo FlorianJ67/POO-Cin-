@@ -1,9 +1,5 @@
 <?php
 class Actor extends People {
-    protected $_name;
-    protected $_fName;
-    protected $_sexe;
-    protected $_birthday;
     private $_casting =[];
         
     public function __construct(string $fName,string $name,string $sexe,$birthday){
@@ -38,5 +34,8 @@ class Actor extends People {
         $this->_birthday = $birthday;
     }
 
+    public function addCasting($newCasting){
+        array_push($this->_casting,$newCasting);
+    }
 }
 ?>
