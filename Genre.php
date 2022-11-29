@@ -24,7 +24,7 @@ class Genre {
 
     public function listFilm(){
         foreach($this->_films as $film){
-            echo "Le genre ".$this->getName()." est associé au film " .$film."<br>";
+            echo "Le genre ".$this->getName()." est associé au film " .$film->getTitle()." " . $film->getLaunchDate()."<br>";
         }
     }
 }

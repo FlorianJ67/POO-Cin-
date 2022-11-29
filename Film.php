@@ -12,9 +12,9 @@ class Film {
         $this->_launchDate = $launchDate;
         $this->_length = $length;
         $this->_director = $director->displayFullName();
-        $director->addFilm($title);
+        $director->addFilm($this);
         $this->_genre = $genre->_name;
-        $genre->addFilmToGenre($title);
+        $genre->addFilmToGenre($this);
     }
             
     //GET
@@ -35,12 +35,6 @@ class Film {
     }
         
     //SET
-    public function setTitle($title){
-        $this->_libelle = $libelle;
-    }
-    public function setLaunchDate($LaunchDate){
-        $this->_devise = $devise;
-    }
     public function setLength($length){
         $this->_length = $length;
     }   
@@ -53,7 +47,7 @@ class Film {
     }
     public function listCasting(){
         foreach($this->_casting as $casting){
-            echo "Dans le film ".$this->getTitle()." " .$casting->getRole()->getName()." est interpréter par ".$casting->getActor()->getFname()." ".$casting->getActor()->getName();
+            echo "Dans le film ".$this->getTitle()." ". $this->getLaunchDate() ." ".$casting->getRole()->getName()." est interpréter par ".$casting->getActor()->getFname()." ".$casting->getActor()->getName();
         }
     }
 }

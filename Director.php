@@ -41,7 +41,7 @@ class Director extends People{
     public function listFilm(){
         echo "Le réalisateur ".$this->getFname()." ".$this->getName(). " a produit les films suivant:<br>";
         foreach($this->_films as $film){
-            echo $film."<br>";
+            echo $film->getTitle() . " ". $film->getLaunchDate(). "<br>";
         }
     }
 }
